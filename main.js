@@ -40,6 +40,23 @@ $('a[href*="#"]')
   }
 });
 
+// ========== 1.0 Mobile Menu ======== //
+  $('body').removeClass("stop-scrolling");
+  $('#nav-icon2').click(function(){
+    $("#mySidenav").toggleClass("open-close");
+    $("header").toggleClass("blur-filter");
+  })
+	$('#nav-icon2').click(function(){
+		$(this).toggleClass('open');
+    $("body").toggleClass("stop-scrolling");
+	});
+  $('#mySidenav a').click(function(){
+    $("header").toggleClass("blur-filter");
+    $('#mySidenav').toggleClass('open-close');
+    $('#nav-icon2').toggleClass('open');
+    $("body").removeClass("stop-scrolling");
+  })
+
 // ========== 2.0 Arrow Top ======== //
 
 if ($('#back-to-top').length) {

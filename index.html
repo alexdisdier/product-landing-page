@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="This website is part of a freecodecamp responsive design certification. The product landing page will consist of ...">
-  <meta name="author" content="">
+  <meta name="description" content="This website is part of a freecodecamp responsive design certification. The product landing page will present the BMW S1000R.">
+  <meta name="author" content="alex disdier">
   <!-- favicon -->
   <link rel="icon" type="image/png" href="assets/img/default-favicon.png" />
 
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" type="text/css">
 
   <!-- Bootstrap 4 framework -->
-  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
   <!-- google font -->
   <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700" rel="stylesheet">
@@ -28,60 +28,93 @@
 <body>
   <header id="header">
 
-    <div class="header-container">
-      <a class="logo" href="#">Mix Ducati/BMW<img src="" id="header-img" class="" /></a>
+    <!-- ================= Mobile NavBar ================== -->
+    <div id="mySidenav" class="sidenav">
+      <a href="#about-anchor">About</a>
+      <a href="#past-projects-anchor">Past</a>
+      <a href="#upcoming-anchor">Upcoming</a>
+      <a href="#skills-anchor">Skills</a>
+      <a href="#info-anchor">Contact</a>
+    </div>
+    <div class="sandwich-banner" class="hide-mobile">
+      <div>
+        alex
+      </div>
+      <div id="nav-icon2">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
 
-      <nav id="nav-bar" class="">
-        <a class="nav-link" href="#features">Features S 1000 R - monster 1200 S</a>
-        <a class="nav-link" href="#video">Video</a>
-        <a class="nav-link" href="#pricing">Pricing</a>
-        <a class="nav-link" href="#support">Support</a>
-      </nav>
-    </div><!-- header-container -->
+    <nav id="nav-bar" class="fixed-top navbar hide-desktop">
+      <a class="navbar-brand" href="#">
+        <img id="header-img" src="#" width="30" height="30" class="d-inline-block align-top" alt="">
+        BMW
+      </a>
+      <a class="nav-link" href="#features">Features</a>
+      <a class="nav-link" href="#video">Video</a>
+      <a class="nav-link" href="#pricing">Pricing</a>
+      <a class="nav-link" href="#support">Support</a>
+    </nav>
 
   </header>
 
   <main>
+    <div class="container">
 
-    <div id="features" class="features-div">
+      <div id="features" class="features-div">
+        <div class="row bmw">
+          <div class="col-sm-12 col-md-6">
+            <p>If your heartbeat races in proportion to the tachometer, then the S 1000 R is the Roadster for you. It’s stripped down to the essentials but maximized for pure riding pleasure. Its aggressive engine with its 165 hp (121 kW) will put a
+              smile on your face every time it revs up. The rich sound of the new standard HP titanium rear silencer leaves no doubt: that's how life in the fast lane sounds.</p>
+          </div>
 
-    </div>
+          <div class="col-sm-12 col-md-6">
+            <img class="img-fluid" src="assets/img/BMW-S1000R-1.png" alt="BMW red motorcycle S1000R">
+          </div>
+        </div><!-- row -->
+      </div>
 
-    <div class="video-div">
-      <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/XapnaWrmNRo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/DSPDMmc1e-8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
-
-    <div id="pricing" class="pricing-div">
-
-    </div>
-
-    <div id="support" class="">
-
-
-      <form id="form" class="" action="" enctype="multipart/form-data" novalidate>
-
-        <div class="form-group">
-          <label for="name">Your name</label>
-          <input type="text" class="form-control" id="name" placeholder="John Doe" name="name" required>
+      <div class="figma">
+        <div class="row">
+          <iframe style="border: none; margin-top: 24px; margin-bottom: 24px;" width="1200" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FTMQqPTA3GEYkLjfm0Envug%2Fs1000r-mobile%3Fnode-id%3D0%253A1"
+            allowfullscreen></iframe>
         </div>
+      </div><!-- figma -->
 
-        <div class="form-group">
-          <label for="email">Email address</label>
-          <input type="email" class="form-control" id="email" placeholder="johndoe@freecodecamp.com" name="email" required>
-          <small id="emailHelp" class="form-text text-muted">I'll never share your email with anyone else.</small>
-        </div>
+      <div id="pricing" class="pricing-div">
 
-        <div class="form-group hide">
-          <label for="number">Number</label>
-          <input type="number" class="form-control" id="number" min="0" max="10" placeholder="0" name="number" value="0" required>
-        </div>
+      </div>
 
-        <input type="submit" class="btn btn-danger" id="submit" name="submit" value="submit" />
+      <div id="support" class="">
 
-      </form>
+        <form id="form" class="" action="" enctype="multipart/form-data" novalidate>
+
+          <div class="form-group">
+            <label for="name">Your name</label>
+            <input type="text" class="form-control" id="name" placeholder="John Doe" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="johndoe@freecodecamp.com" name="email" required>
+            <small id="emailHelp" class="form-text text-muted">I'll never share your email with anyone else.</small>
+          </div>
+
+          <div class="form-group hide">
+            <label for="number">Number</label>
+            <input type="number" class="form-control" id="number" min="0" max="10" placeholder="0" name="number" value="0" required>
+          </div>
+
+          <input type="submit" class="btn btn-danger" id="submit" name="submit" value="submit" />
+
+        </form>
+      </div>
     </div>
-
   </main>
 
   <footer></footer>
@@ -96,8 +129,8 @@
   <script src="main.js"></script>
 
   <!-- freecodecamp testable projects -->
-  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
-  </script>
+  <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js">
+  </script> -->
 
 </body>
 
