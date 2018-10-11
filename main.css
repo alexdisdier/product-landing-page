@@ -2,22 +2,13 @@ html {
   font-size: 14px;
 }
 
-.hide-desktop {
-  display: none;
+body {
+  font-size: 100%;
+  color: #fff;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-
-  .hide-mobile, #nav-icon2 {
-    display: none;
-  }
-
-  .hide-desktop {
-    display: flex;
-  }
+.tablet {
+  display: none;
 }
 
 header {
@@ -25,7 +16,7 @@ header {
   background-image: url(assets/img/BMW-S1000R-bg2.jpg);
   background-color: #222;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 43%;
   background-size: cover;
 }
 
@@ -33,44 +24,44 @@ header a {
   color: #fff;
 }
 
-/* ================= 3.0 Burger Menu ========= */
+.menu-icon-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+#header-img {
+  width: 50px;
+}
+
 .sidenav {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 5;
+  z-index: 1;
   top: 0;
   right: 0;
   background-color: #fff;
   overflow-x: hidden;
+  transition: 0.5s;
   padding-top: 60px;
-  transition-property: width;
-  transition-duration: 0.8s;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
-
-.header {
-  transition-duration: 0.8s;
 }
 
 .sidenav a {
-  padding: 8px 8px 8px 32px;
+  padding: 20px 10px;
+  margin: 10px 10px;
   text-decoration: none;
-  font-size: 1.4em;
+  font-size: 13px;
   color: #222;
   display: block;
   transition: 0.3s;
-}
-
-.open-close {
-  width: 50%;
-  transition-property: width;
-  transition-duration: 0.8s;
+  border-bottom: 1px solid #ddd;
+  text-transform: uppercase;
 }
 
 .sidenav a:hover {
   color: #f1f1f1;
-  transition: 0.3s;
 }
 
 .sidenav .closebtn {
@@ -81,154 +72,161 @@ header a {
   margin-left: 50px;
 }
 
-.sandwich {
-  color: white;
-  padding-left: 20px;
+/* burger animation */
+.menu-toggle {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 16px;
+  background: transparent;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  color: #fff;
+  font-size: 0;
+  transition: all 0.25s ease-in-out;
 }
 
-.stop-scrolling {
-  height: 100%;
-  overflow: hidden;
-  position: fixed;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-
-  .sidenav a {
-    font-size: 14px;
-  }
-
-  .mobile {
-    display: block;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-  }
-
-  .flex {
-    margin-top: 60px;
-  }
-}
-
-/* ============= 4.0 Burger Menu icon ========= */
-#nav-icon2 {
-  width: 35px;
-  height: 45px;
+.menu-toggle:before, .menu-toggle:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px;
   position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 5;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
-  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  background: currentColor;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition: -webkit-transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
 }
 
-#nav-icon2 span {
+button {
+  z-index: 5;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  color: #fff;
+}
+
+button.is-active {
+  border-color: transparent;
+  color: #222;
+}
+
+#mySidenav.is-active {
+  width: 50%;
+}
+
+button.is-active:before {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+button.is-active:after {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+/* end burger animation */
+.title {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.title h1 {
+  font-size: 16px;
+  font-size: 1.143em;
+  font-weight: 100;
+}
+
+.title span {
+  display: block;
+  font-size: 24px;
+  font-size: 1.714em;
+  font-weight: 400;
+}
+
+.header-bottom {
   display: block;
   position: absolute;
-  height: 1.5px;
-  width: 50%;
-  background: #fff;
-  opacity: 1;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  text-align: center;
 }
 
-#nav-icon2 span:nth-child(even) {
-  left: 50%;
-  border-radius: 0 9px 9px 0;
+.speedometer {
+  position: relative;
+  height: 30px;
+  width: 48px;
+  display: inline-block;
+  background-image: url(assets/img/speedometer.svg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }
 
-#nav-icon2 span:nth-child(odd) {
-  left: 0px;
-  border-radius: 9px 0 0 9px;
+.speedometer-circle {
+  position: absolute;
+  width: 33px;
+  height: 17px;
+  bottom: 4px;
+  left: 7px;
+  overflow: hidden;
+  background-image: url(assets/img/speedometercircle.svg);
 }
 
-#nav-icon2 span:nth-child(1), #nav-icon2 span:nth-child(2) {
-  top: 0px;
-}
-
-#nav-icon2 span:nth-child(3), #nav-icon2 span:nth-child(4) {
-  top: 10px;
-}
-
-#nav-icon2 span:nth-child(5), #nav-icon2 span:nth-child(6) {
-  top: 20px;
-}
-
-#nav-icon2 .open {
-  position: fixed;
-}
-
-#nav-icon2 .open span {
-  color: #222 !important;
-}
-
-#nav-icon2.open span:nth-child(1), #nav-icon2.open span:nth-child(6) {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-#nav-icon2.open span:nth-child(2), #nav-icon2.open span:nth-child(5) {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-#nav-icon2.open span:nth-child(1) {
-  left: 1px;
-  top: 6px;
-}
-
-#nav-icon2.open span:nth-child(2) {
-  left: calc(50% - 5px);
-  top: 7px;
-}
-
-#nav-icon2.open span:nth-child(3) {
-  left: -50%;
-  opacity: 0;
-}
-
-#nav-icon2.open span:nth-child(4) {
-  left: 100%;
-  opacity: 0;
-}
-
-#nav-icon2.open span:nth-child(5) {
+.speedometer-circle-inner {
+  position: absolute;
+  width: 33px;
+  height: 17px;
+  bottom: 0;
   left: 0;
-  top: 20px;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
 }
 
-#nav-icon2.open span:nth-child(6) {
-  left: calc(50% - 5px);
-  top: 19px;
+.speedometer-needle {
+  position: absolute;
+  width: 5px;
+  height: 19px;
+  bottom: 3px;
+  left: 21.5px;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  -webkit-transform-origin: 50% 15px;
+  transform-origin: 50% 15px;
+  background-image: url(assets/img/speedometerneedle.svg);
 }
 
+/* end of header */
 .container {
   max-width: 960px;
 }
 
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
 main {
-  padding-top: 88px;
+  padding-top: 50px;
+  color: #222;
 }
 
 /* Arrow back-to-top */
@@ -261,4 +259,32 @@ main {
 
 #back-to-top.show {
   opacity: 0.7;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
+  .tablet {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  #nav-bar {
+    display: inline-flex;
+    justify-content: flex-end;
+  }
+
+  #nav-bar a {
+    transition: 0.3s;
+  }
+
+  #nav-bar a:hover {
+    color: #fff;
+    opacity: 0.6;
+  }
 }

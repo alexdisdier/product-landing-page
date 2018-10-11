@@ -99,3 +99,9 @@ if ($('#back-to-top').length) {
     });
   }, false);
 })();
+
+$('button').on('click', function() {
+  $(this).toggleClass('is-active');
+  $("#mySidenav").toggleClass('is-active');
+  // $("body").toggleClass("stop-scrolling");
+});

@@ -29,68 +29,94 @@
   <header id="header">
 
     <!-- ================= Mobile NavBar ================== -->
-    <div id="mySidenav" class="sidenav">
-      <a href="#about-anchor">About</a>
-      <a href="#past-projects-anchor">Past</a>
-      <a href="#upcoming-anchor">Upcoming</a>
-      <a href="#skills-anchor">Skills</a>
-      <a href="#info-anchor">Contact</a>
+    <div class="menu-icon-flex">
+      <img id="header-img" src="assets/img/BMW-logo-futuristic.svg" class="d-inline-block align-top" alt="BMW logo">
+      <button class="menu-toggle mobile">Menu</button>
     </div>
-    <div class="sandwich-banner" class="hide-mobile">
-      <div>
-        alex
-      </div>
-      <div id="nav-icon2">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+    <div id="mySidenav" class="sidenav mobile">
+      <a href="#features">Presentation</a>
+      <a href="#video">Video</a>
+      <a href="#pricing">Pricing&nbsp;and&nbsp;specs</a>
+      <a href="#contact">Contact</a>
     </div>
 
-    <nav id="nav-bar" class="fixed-top navbar hide-desktop">
-      <a class="navbar-brand" href="#">
-        <img id="header-img" src="#" width="30" height="30" class="d-inline-block align-top" alt="">
-        BMW
-      </a>
-      <a class="nav-link" href="#features">Features</a>
+    <nav id="nav-bar" class="fixed-top navbar tablet">
+      <a class="nav-link" href="#features">Presentation</a>
       <a class="nav-link" href="#video">Video</a>
-      <a class="nav-link" href="#pricing">Pricing</a>
-      <a class="nav-link" href="#support">Support</a>
+      <a class="nav-link" href="#pricing">Pricing&nbsp;and&nbsp;specs</a>
+      <a class="nav-link" href="#contact">Contact</a>
     </nav>
 
+    <div class="title">
+      <h1>bmw<span>s1000r</span></h1>
+    </div>
+
+    <!-- <ul>
+      <li>
+        <div class="top">
+
+        </div>
+        <div class="info">
+          <div class="speedometer">
+            <div class="speedometer-circle">
+              <div class="speedometer-circle-inner">
+                <div class="speedometer-circle-inner" style="transform: translateZ(0px) rotateZ(-1deg);"></div>
+                <div class="speedometer-needle" style="transform: translateZ(0px) rotateZ(90deg);"></div>
+              </div>
+            </div>
+          </div>
+          <div class="numbers">
+
+          </div>
+        </div>
+      </li>
+    </ul>
+     -->
+    <div class="header-bottom">
+      <div class="row">
+        <div class="col-4">
+          <p>2.6</p>
+          <p>From 0-100km/h</p>
+        </div>
+        <div class="col-4">
+          <p>121 kW</p>
+          <p>at 11 000 rpm</p>
+        </div>
+        <div class="col-4">
+          <p>999c</p>
+          <p>capacity</p>
+        </div>
+      </div>
+    </div>
   </header>
 
   <main>
-    <div class="container">
 
-      <div id="features" class="features-div">
-        <div class="row bmw">
-          <div class="col-sm-12 col-md-6">
-            <p>If your heartbeat races in proportion to the tachometer, then the S 1000 R is the Roadster for you. It’s stripped down to the essentials but maximized for pure riding pleasure. Its aggressive engine with its 165 hp (121 kW) will put a
-              smile on your face every time it revs up. The rich sound of the new standard HP titanium rear silencer leaves no doubt: that's how life in the fast lane sounds.</p>
-          </div>
-
-          <div class="col-sm-12 col-md-6">
-            <img class="img-fluid" src="assets/img/BMW-S1000R-1.png" alt="BMW red motorcycle S1000R">
-          </div>
-        </div><!-- row -->
+    <section id="features" class="section">
+      <div class="container">
+        <h2>Uncompromising dynamics</h2>
+        <p>If your heartbeat races in proportion to the tachometer, then the S 1000 R is the Roadster for you.<br />It’s stripped down to the essentials but maximized for pure riding pleasure.
+        </p>
       </div>
+      <img class="img-fluid" src="assets/img/BMW-S1000R-front.jpg" alt="BMW S1000R motorcycle front">
+    </section><!-- features -->
 
-      <div class="figma">
-        <div class="row">
-          <iframe style="border: none; margin-top: 24px; margin-bottom: 24px;" width="1200" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FTMQqPTA3GEYkLjfm0Envug%2Fs1000r-mobile%3Fnode-id%3D0%253A1"
-            allowfullscreen></iframe>
-        </div>
-      </div><!-- figma -->
+    <div class="figma">
+      <div class="row">
+        <iframe style="border: none; margin-top: 24px; margin-bottom: 24px;" width="1200" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FTMQqPTA3GEYkLjfm0Envug%2Fs1000r-mobile%3Fnode-id%3D0%253A1"
+          allowfullscreen></iframe>
+      </div>
+    </div><!-- figma -->
 
-      <div id="pricing" class="pricing-div">
+    <div id="pricing" class="pricing-div">
+      <div class="container">
 
       </div>
 
-      <div id="support" class="">
+    </div>
+
+    <div id="contact" class="">
+      <div class="container">
 
         <form id="form" class="" action="" enctype="multipart/form-data" novalidate>
 
@@ -113,8 +139,9 @@
           <input type="submit" class="btn btn-danger" id="submit" name="submit" value="submit" />
 
         </form>
-      </div>
-    </div>
+      </div><!-- container -->
+    </div><!-- contact -->
+
   </main>
 
   <footer></footer>
