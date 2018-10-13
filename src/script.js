@@ -1,6 +1,14 @@
 "use strict";
 
-// ========== smoothScroll ============ //
+/*--------------------------------------------------------------
+1.0 Scrolling Animation initiate
+--------------------------------------------------------------*/
+
+ AOS.init();
+
+ /*--------------------------------------------------------------
+ 2.0 Smooth scrolling
+ --------------------------------------------------------------*/
 
 // Select all links with hashes
 $('a[href*="#"]')
@@ -40,24 +48,25 @@ $('a[href*="#"]')
   }
 });
 
-// ========== 1.0 Mobile Menu ======== //
-  $('body').removeClass("stop-scrolling");
-  $('#nav-icon2').click(function(){
-    $("#mySidenav").toggleClass("open-close");
-    $("header").toggleClass("blur-filter");
-  })
-	$('#nav-icon2').click(function(){
-		$(this).toggleClass('open');
-    $("body").toggleClass("stop-scrolling");
-	});
-  $('#mySidenav a').click(function(){
-    $("header").toggleClass("blur-filter");
-    $('#mySidenav').toggleClass('open-close');
-    $('#nav-icon2').toggleClass('open');
-    $("body").removeClass("stop-scrolling");
-  })
+/*--------------------------------------------------------------
+3.0 Mobile Menu
+--------------------------------------------------------------*/
 
-// ========== 2.0 Arrow Top ======== //
+$('#mySidenav a').on('click', function() {
+  $("#mySidenav").toggleClass('is-active');
+  $("#js-menu-toggle").toggleClass('is-active');
+  // $("body").toggleClass("stop-scrolling");
+});
+
+$('#js-menu-toggle').on('click', function() {
+  $(this).toggleClass('is-active');
+  $("#mySidenav").toggleClass('is-active');
+    // $("body").toggleClass("stop-scrolling");
+});
+
+/*--------------------------------------------------------------
+4.0 Arrow Top
+--------------------------------------------------------------*/
 
 if ($('#back-to-top').length) {
   var scrollTrigger = 100, // px
@@ -81,30 +90,28 @@ if ($('#back-to-top').length) {
   });
 }
 
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
+/*--------------------------------------------------------------
+5.0 Miscellanous
+--------------------------------------------------------------*/
 
-$('button').on('click', function() {
-  $(this).toggleClass('is-active');
-  $("#mySidenav").toggleClass('is-active');
-  // $("body").toggleClass("stop-scrolling");
-});
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+// (function() {
+//   'use strict';
+//   window.addEventListener('load', function() {
+//     // Fetch all the forms we want to apply custom Bootstrap validation styles to
+//     var forms = document.getElementsByClassName('needs-validation');
+//     // Loop over them and prevent submission
+//     var validation = Array.prototype.filter.call(forms, function(form) {
+//       form.addEventListener('submit', function(event) {
+//         if (form.checkValidity() === false) {
+//           event.preventDefault();
+//           event.stopPropagation();
+//         }
+//         form.classList.add('was-validated');
+//       }, false);
+//     });
+//   }, false);
+// })();
 
 // scroll-snapping - https://css-tricks.com/practical-css-scroll-snapping/
 // const gra = function(min, max) {

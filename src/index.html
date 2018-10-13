@@ -17,27 +17,26 @@
   <!-- Bootstrap 4 framework -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
-  <!-- google font -->
-  <link href="https://fonts.googleapis.com/css?family=Kanit:100,400,700" rel="stylesheet">
-
   <!-- My stylesheet -->
   <link rel="stylesheet" href="main.min.css" type="text/css">
+
+  <!-- aos animation on scroll -->
+  <link href="css/aos.css" rel="stylesheet" type="text/css">
 
 </head>
 
 <body>
 
-  <header id="header" class="js-scroll-snapping">
-
+  <header id="header">
     <!-- ================= Mobile NavBar ================== -->
     <div class="menu-icon-flex">
       <img id="header-img" src="img/BMW-logo-futuristic.svg" class="d-inline-block align-top" alt="BMW logo">
-      <button class="menu-toggle mobile">Menu</button>
+      <button id="js-menu-toggle" class="menu-toggle mobile">Menu</button>
     </div>
     <div id="mySidenav" class="sidenav mobile">
       <a href="#dynamics">Dynamics</a>
       <a href="#engine">Engine</a>
-      <a href="#Adjustments">Adjustments</a>
+      <a href="#adjustments">Adjustments</a>
       <a href="#specifications">Specifications</a>
       <a href="#specifications">Contact</a>
     </div>
@@ -45,13 +44,13 @@
     <nav id="nav-bar" class="fixed-top navbar tablet">
       <a class="nav-link" href="#dynamics">Dynamics</a>
       <a class="nav-link" href="#engine">Engine</a>
-      <a class="nav-link" href="#Adjustments">Adjustments</a>
+      <a class="nav-link" href="#adjustments">Adjustments</a>
       <a class="nav-link" href="#specifications">Specifications</a>
       <a class="nav-link" href="#specifications">Contact</a>
     </nav>
 
     <div class="title">
-      <h1>bmw<span>s1000r</span></h1>
+      <h1 data-aos="fade-up" data-aos-easing="ease" data-aos-duration="800">bmw<span>s1000r</span></h1>
     </div>
 
     <div class="header-bottom">
@@ -75,22 +74,28 @@
         </div>
       </div>
     </div>
+
+    <a href="#dynamics"><svg class="arrow-down bounce" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
+        <g>
+          <path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z" fill="#fff" />
+        </g>
+      </svg></a>
   </header>
 
   <main>
 
-    <section id="dynamics" class="js-scroll-snapping section">
+    <section id="dynamics" class="section">
       <div class="container">
-        <div class="content">
+        <div class="content" data-aos="fade-up" data-aos-easing="ease">
+          <!-- data-aos-duration="1000" -->
           <h2>Uncompromising dynamics</h2>
           <p>If your heartbeat races in proportion to the tachometer, then the S 1000 R is the Roadster for you.<br />It’s stripped down to the essentials but maximized for pure riding pleasure.
           </p>
-          <div class="cta">
-            <button type="button" name="button" class="js-expand">
-              <span class="btn-plus">+</span>
-              <span class="btn-more">learn more</span>
-            </button>
-            <a href="#" target="_blank">order</a>
+          <div class="cta" data-aos="fade-up" data-aos-easing="ease">
+
+            <button type="button" name="button" class="btn-plus js-expand">+</button><span class="btn-more">learn more</span>
+
+            <a href="#" target="_blank">order now</a>
           </div><!-- Call To Action -->
         </div>
       </div>
@@ -100,18 +105,17 @@
       <!-- <img class="img-fluid" src="assets/img/BMW-S1000R-front.jpg" alt="BMW S1000R motorcycle front"> -->
     </section><!-- features -->
 
-    <section id="engine" class="js-scroll-snapping section">
+    <section id="engine" class="section">
       <div class="container">
-        <div class="content">
+        <div class="content" data-aos="fade-up" data-aos-easing="ease">
           <h2>The source of all dynamics: the engine</h2>
           <p>The high-performance 4-cylinder in-line engine, just like the rear, descends from the RR. <br />We have increased the power again to 165 hp (121 kW).
           </p>
-          <div class="cta">
-            <button type="button" name="button" class="js-expand">
-              <span class="btn-plus">+</span>
-              <span class="btn-more">learn more</span>
-            </button>
-            <a href="#" target="_blank">order</a>
+          <div class="cta" data-aos="fade-up" data-aos-easing="ease">
+
+            <button type="button" name="button" class="btn-plus js-expand">+</button><span class="btn-more">learn more</span>
+
+            <a href="#" target="_blank">order now</a>
           </div><!-- Call To Action -->
         </div>
       </div>
@@ -120,17 +124,18 @@
       </div>
     </section><!-- features -->
 
-    <section id="adjustments" class="js-scroll-snapping section">
+    <section id="adjustments" class="section">
       <div class="container">
-        <div class="content">
+        <div class="content" data-aos="fade-up" data-aos-easing="ease">
           <h2>Room for adjustments</h2>
           <p>The S 1000 R comes with two standard riding modes” “Rain” and “Road.” <br />The ABS and ASC in “Rain mode” provides a more gentle throttle, best suited for wet road surfaces; while the “Road” mode optimizes the throttle response of the
             ABS and ASC when riding on dry asphalt.
           </p>
-          <div class="cta">
-            <button class="btn btn-default btn-circle" type="button" name="button" class="js-expand">+
-            </button><span class="btn-more">learn more</span>
-            <a href="#" target="_blank">order</a>
+          <div class="cta" data-aos="fade-up" data-aos-easing="ease">
+
+            <button type="button" name="button" class="btn-plus js-expand">+</button><span class="btn-more">learn more</span>
+
+            <a href="#" target="_blank">order now</a>
           </div><!-- Call To Action -->
         </div>
       </div>
@@ -139,11 +144,30 @@
       </div>
     </section><!-- features -->
 
+    <section id="specifications" class="section">
+      <div class="container">
+        <div class="content" data-aos="fade-up" data-aos-easing="ease">
+          <h2>2018 S 1000 R<span>From $13,995</span></h2>
+          <p>The S 1000 R comes with two standard riding modes” “Rain” and “Road.” <br />The ABS and ASC in “Rain mode” provides a more gentle throttle, best suited for wet road surfaces; while the “Road” mode optimizes the throttle response of the
+            ABS and ASC when riding on dry asphalt.
+          </p>
+          <div class="cta" data-aos="fade-up" data-aos-easing="ease">
+
+            <button type="button" name="button" class="btn-plus js-expand">+</button><span class="btn-more">learn more</span>
+
+            <a href="#" target="_blank">order now</a>
+          </div><!-- Call To Action -->
+        </div>
+      </div>
+      <div class="img-bg-adjustments">
+
+      </div>
+    </section><!-- features -->
 
     <div id="contact" class="">
       <div class="container">
 
-        <form id="form" class="" action="" enctype="multipart/form-data" novalidate>
+        <form id="form" class="" action="" enctype="multipart/form-data" novalidate data-aos="fade-up" data-aos-easing="ease">
 
           <div class="form-group">
             <label for="name">Your name</label>
@@ -161,7 +185,7 @@
             <input type="number" class="form-control" id="number" min="0" max="10" placeholder="0" name="number" value="0" required>
           </div>
 
-          <input type="submit" class="btn btn-danger" id="submit" name="submit" value="submit" />
+          <input type="submit" class="btn" id="submit" name="submit" value="submit" />
 
         </form>
       </div><!-- container -->
@@ -169,12 +193,22 @@
 
   </main>
 
-  <footer></footer>
+  <footer>
+    <div class="container">
+      <p>BMW C 2018</p>
+    </div>
+  </footer>
+
+
 
   <!-- button to bring back to the top -->
-  <a href="#" id="back-to-top" title="Back to top">&uarr;</a>
+  <a href="#" id="back-to-top" title="Back to top"><svg class="arrow-up" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
+      <path d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z" fill="#000" />
+    </svg>
+  </a>
 
   <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/aos.js"></script>
   <script src="script.min.js"></script>
 
   <!-- freecodecamp testable projects -->

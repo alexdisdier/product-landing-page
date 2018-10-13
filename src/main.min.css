@@ -12,27 +12,30 @@
 @font-face{font-family:'Gotham';font-style:normal;font-weight:900;src:local('Gotham Black'),local('Gotham-Black'),url("assets/fonts/Gotham/Gotham-Black.ttf") format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 *{-webkit-box-sizing:border-box;box-sizing:border-box}
 html{font-size:14px}
-body{font-family:'Kanit',sans-serif;font-size:100%;-webkit-scroll-snap-type:mandatory;-ms-scroll-snap-type:mandatory;scroll-snap-type:mandatory;-webkit-scroll-snap-points-y:repeat(100vh);-ms-scroll-snap-points-y:repeat(100vh);scroll-snap-points-y:repeat(100vh);-webkit-scroll-snap-type:y mandatory;-ms-scroll-snap-type:y mandatory;scroll-snap-type:y mandatory;color:#fff}
+body{font-family:'Kanit',sans-serif;font-size:100%;color:#fff}
 .tablet{display:none}
+.container{max-width:960px}
+.row{margin-right:0;margin-left:0}
 header{height:100vh;background-image:url(img/BMW-S1000R-bg2.jpg);background-color:#222;background-repeat:no-repeat;background-position:43%;background-size:cover}
 header a{color:#fff}
-.menu-icon-flex{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;padding:16px}
 #header-img{width:50px}
+.menu-icon-flex{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;padding:16px}
 .sidenav{height:100%;width:0;position:fixed;z-index:1;top:0;right:0;background-color:#fff;overflow-x:hidden;-webkit-transition:.5s;transition:.5s;padding-top:60px}
 .sidenav a{padding:20px 10px;margin:10px 10px;text-decoration:none;font-size:16px;color:#222;display:block;-webkit-transition:.3s;transition:.3s;border-bottom:1px solid #ddd;text-transform:uppercase}
 .sidenav a:last-child{border-bottom:0}
 .sidenav a:hover{color:#222;opacity:.8}
 .sidenav .closebtn{position:absolute;top:0;right:25px;font-size:36px;margin-left:50px}
+#mySidenav.is-active{width:50%}
 .menu-toggle{position:relative;display:block;width:30px;height:16px;background:transparent;border-top:2px solid;border-bottom:2px solid;color:#fff;font-size:0;-webkit-transition:all .25s ease-in-out;transition:all .25s ease-in-out}
 .menu-toggle:before,.menu-toggle:after{content:'';display:block;width:100%;height:2px;position:absolute;top:50%;left:50%;background:currentColor;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);transition:-webkit-transform .25s ease-in-out;-webkit-transition:-webkit-transform .25s ease-in-out;transition:transform .25s ease-in-out;transition:transform .25s ease-in-out,-webkit-transform .25s ease-in-out}
-button{z-index:5}
-button:focus{outline:0}
-button:hover{color:#fff}
-button.is-active{border-color:transparent;color:#222}
-#mySidenav.is-active{width:50%}
-button.is-active:before{-webkit-transform:translate(-50%,-50%) rotate(45deg);-ms-transform:translate(-50%,-50%) rotate(45deg);transform:translate(-50%,-50%) rotate(45deg)}
-button.is-active:after{-webkit-transform:translate(-50%,-50%) rotate(-45deg);-ms-transform:translate(-50%,-50%) rotate(-45deg);transform:translate(-50%,-50%) rotate(-45deg)}
+.menu-toggle{z-index:5}
+.menu-toggle:focus{outline:0}
+.menu-toggle:hover{color:#fff}
+.menu-toggle.is-active{border-color:transparent;color:#222}
+.menu-toggle.is-active:before{-webkit-transform:translate(-50%,-50%) rotate(45deg);-ms-transform:translate(-50%,-50%) rotate(45deg);transform:translate(-50%,-50%) rotate(45deg)}
+.menu-toggle.is-active:after{-webkit-transform:translate(-50%,-50%) rotate(-45deg);-ms-transform:translate(-50%,-50%) rotate(-45deg);transform:translate(-50%,-50%) rotate(-45deg)}
 button{border:0;cursor:pointer;outline:0}
+.arrow-down{width:24px;position:absolute;bottom:0;right:25%;left:50%;margin-left:-12px;padding-bottom:8px}
 .title{text-align:center;color:#fff;text-transform:uppercase}
 .title h1{font-size:16px;font-size:1.143em;font-weight:100}
 .title span{display:block;font-size:24px;font-size:1.714em;font-weight:400}
@@ -41,33 +44,44 @@ button{border:0;cursor:pointer;outline:0}
 .header-bottom .col-4:last-child{border-right:0}
 .header-bottom p:first-child{font-size:16px}
 .header-bottom p:nth-child(2){font-size:9.3px}
-#speed-col{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-justify-content:space-around;-ms-flex-pack:distribute;justify-content:space-around}
-.speedometer{position:relative;height:30px;width:48px;display:inline-block;background-image:url(img/speedometer.svg);background-size:100% auto;background-repeat:no-repeat}
-.speedometer-circle{position:absolute;width:33px;height:17px;bottom:4px;left:7px;overflow:hidden;background-image:url(img/speedometercircle.svg)}
-.speedometer-circle-inner{position:absolute;width:33px;height:17px;bottom:0;left:0;background-size:100% auto;background-repeat:no-repeat;-webkit-transform-origin:50% 100%;-ms-transform-origin:50% 100%;transform-origin:50% 100%}
-.speedometer-needle{position:absolute;width:5px;height:19px;bottom:3px;left:21.5px;background-size:100% auto;background-repeat:no-repeat;-webkit-transform-origin:50% 15px;-ms-transform-origin:50% 15px;transform-origin:50% 15px;background-image:url(img/speedometerneedle.svg)}
-.container{max-width:960px}
-.row{margin-right:0;margin-left:0}
 main{color:#222}
 .section{padding-top:40px}
 .section h2{font-weight:400}
-.section p{font-weight:100;line-height:1.6}
+.section p{padding-bottom:24px;font-weight:100;line-height:1.6}
 .img-bg-dynamics{height:320px;width:auto;background-image:url(img/BMW-S1000R-front-small.jpg);background-color:#222;background-repeat:no-repeat;background-position:center;background-size:cover}
 .img-bg-engine{height:320px;width:auto;background-image:url(img/BMW-S1000R-willy-small.jpg);background-color:#222;background-repeat:no-repeat;background-position:left;background-size:cover}
+.img-bg-adjustments{height:320px;width:auto;background-image:url(img/bmw-youtube-small.jpg);background-color:#222;background-repeat:no-repeat;background-position:center;background-size:cover}
 .content{padding-bottom:50px}
-.btn-circle{border-radius:50%;border:2px solid #222;background:transparent;margin-right:8px}
-#back-to-top{position:fixed;bottom:50px;right:40px;z-index:9999;width:32px;height:42px;text-align:center;line-height:40px;background:blue;color:white;cursor:pointer;border:0;border-radius:5px;text-decoration:none;-webkit-transition:opacity .2s ease-out;transition:opacity .2s ease-out;opacity:0}
-#back-to-top:hover{background:#e9ebec;color:blue;font-weight:bold;-webkit-transition:.3s;transition:.3s;-webkit-transform:translateY(-3px);-ms-transform:translateY(-3px);transform:translateY(-3px)}
+.cta{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
+.btn-plus{background:transparent;border:2px solid black;border-radius:50%;-webkit-transition:.5s;transition:.5s}
+.btn-more{padding-left:8px;font-size:12px;text-transform:uppercase}
+.cta a{margin-left:16px;padding:8px 30px;font-size:12px;color:#222;border:2px solid #222;border-radius:100px;text-transform:uppercase;-webkit-transition:.5s;transition:.5s}
+.cta a:hover,.btn-plus:hover{text-decoration:none;background-color:#222;color:#fff}
+input[type="submit"]{padding:8px 30px;font-size:12px;color:#222;background:transparent;border:2px solid #222;border-radius:100px;text-transform:uppercase;-webkit-transition:.5s;transition:.5s}
+input[type="submit"]:hover{text-decoration:none;background-color:#222;color:#fff}
+footer{margin-top:40px;color:#222;border-top:1px solid #222;text-align:center}
+footer p{margin:20px;padding:20px}
+#back-to-top{position:fixed;right:15px;top:15px;z-index:2;width:24px;height:18px;text-align:center;line-height:40px;color:white;cursor:pointer;border:0;text-decoration:none;-webkit-transition:opacity .2s ease-out;transition:opacity .2s ease-out;opacity:0}
+#back-to-top:hover{font-weight:bold;-webkit-transition:.3s;transition:.3s;-webkit-transform:translateY(-3px);-ms-transform:translateY(-3px);transform:translateY(-3px)}
 #back-to-top.show{opacity:.7}
-@media only screen and (min-device-width:767px){.img-bg-dynamics{height:500px;background-image:url(img/BMW-S1000R-front-big.jpg)}
-.img-bg-engine{height:820px;background-image:url(img/BMW-S1000R-willy-big.jpg);background-position:center}
-}@media(min-width:767px) and (max-width:1024px){.title{margin-top:64px}
-}@media(min-width:768px){html{font-size:16px}
+.arrow-up{-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}
+.bounce{-webkit-animation:bounce 2s infinite;animation:bounce 2s infinite}
+@media only screen and (min-width:767px) and (max-width:1024px){.title{margin-top:64px}
+}@media only screen and (min-width:768px){html{font-size:16px}
 .tablet{display:block}
 .mobile{display:none}
 #nav-bar{display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end}
 #nav-bar a{-webkit-transition:.3s;transition:.3s}
 #nav-bar a:hover{color:#fff;opacity:.6}
 .menu-icon-flex img{position:fixed}
+.img-bg-dynamics{height:500px;background-image:url(img/BMW-S1000R-front-big.jpg)}
+.img-bg-engine{height:820px;background-image:url(img/BMW-S1000R-willy-big.jpg);background-position:30%}
+.img-bg-adjustements{height:820px;background-image:url(img/bmw-youtube-big.jpg));background-position:30%}
 }@media(min-width:1024px){.title{position:absolute;top:200px;left:200px}
+}@-webkit-keyframes bounce{0%,20%,50%,80%,100%{-webkit-transform:translateY(0);transform:translateY(0)}
+40%{-webkit-transform:translateY(-10px);transform:translateY(-10px)}
+60%{-webkit-transform:translateY(-5px);transform:translateY(-5px)}
+}@keyframes bounce{0%,20%,50%,80%,100%{-ms-transform:translateY(0);-webkit-transform:translateY(0);transform:translateY(0)}
+40%{-ms-transform:translateY(-10px);-webkit-transform:translateY(-10px);transform:translateY(-10px)}
+60%{-ms-transform:translateY(-5px);-webkit-transform:translateY(-5px);transform:translateY(-5px)}
 }
