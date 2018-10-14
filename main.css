@@ -154,7 +154,7 @@ body {
 --------------------------------------------------------------*/
 header {
   height: 100vh;
-  background-image: url(img/BMW-S1000R-bg2.jpg);
+  background-image: url(img/BMW-S1000R-bg2-small.jpg);
   background-attachment: fixed;
   background-color: #222;
   background-repeat: no-repeat;
@@ -792,8 +792,8 @@ footer p {
     opacity: 0.6;
   }
 
-  .header-bottom p:first-child {
-    font-size: 32px;
+  header {
+    background-image: url(img/BMW-S1000R-bg2-big.jpg);
   }
 
   .header-bottom p:nth-child(2) {
