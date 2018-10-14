@@ -110,17 +110,8 @@ html {
 }
 
 body {
-  font-family: 'Kanit', sans-serif;
+  font-family: 'Gotham', sans-serif;
   font-size: 100%;
-  /* -webkit-scroll-snap-type: mandatory;
-  -ms-scroll-snap-type: mandatory;
-  scroll-snap-type: mandatory;
-  -webkit-scroll-snap-points-y: repeat(100vh);
-  -ms-scroll-snap-points-y: repeat(100vh);
-  scroll-snap-points-y: repeat(100vh);
-  -webkit-scroll-snap-type: y mandatory;
-  -ms-scroll-snap-type: y mandatory;
-  scroll-snap-type: y mandatory; */
   color: #fff;
 }
 
@@ -143,10 +134,21 @@ body {
 header {
   height: 100vh;
   background-image: url(img/BMW-S1000R-bg2.jpg);
+  background-attachment: fixed;
   background-color: #222;
   background-repeat: no-repeat;
   background-position: 43%;
   background-size: cover;
+}
+
+header:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.6) 100%);
 }
 
 header a {
@@ -357,17 +359,19 @@ main {
 }
 
 .section {
-  padding-top: 40px;
+  padding-top: 50px;
 }
 
 .section h2 {
+  padding-bottom: 16px;
   font-weight: 400;
 }
 
 .section p {
   padding-bottom: 24px;
+  font-size: 16px;
   font-weight: 100;
-  line-height: 1.6;
+  line-height: 1.68;
 }
 
 .img-bg-dynamics {
@@ -390,10 +394,10 @@ main {
   background-size: cover;
 }
 
-.img-bg-adjustments {
+.img-bg-specifications {
   height: 320px;
   width: auto;
-  background-image: url(img/bmw-youtube-small.jpg);
+  background-image: url(img/BMW-S1000R-bg3-small.jpg);
   background-color: #222;
   background-repeat: no-repeat;
   background-position: center;
@@ -404,7 +408,65 @@ main {
   padding-bottom: 50px;
 }
 
+/* source: https://benmarshall.me/responsive-iframes/ */
+.iframe-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* 4x3 Aspect Ratio */
+/* .iframe-container-4x3 {
+  padding-top: 75%;
+} */
+#specifications h2 {
+  text-align: center;
+}
+
+#specifications h2 span {
+  display: block;
+  font-weight: 100;
+  font-size: 24px;
+}
+
+#specifications h3 {
+  font-weight: 100;
+  padding-bottom: 16px;
+}
+
+#specifications h4:before {
+  display: block;
+  content: '';
+  width: 26px;
+  height: 1px;
+  margin: 0 0 8px;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+#specifications p {
+  padding-bottom: 16px;
+}
+
+#js-expand-specs {
+  display: none;
+}
+
 /* buttons */
+button:focus {
+  outline: 0;
+}
+
 .cta {
   display: flex;
   flex-direction: row;
@@ -443,11 +505,21 @@ main {
 }
 
 /* form */
+.form-control {
+  background: rgba(220, 220, 220, 0.4) !important;
+  border-radius: 20px !important;
+  border: 0;
+}
+
+.form-group {
+  margin-bottom: 32px;
+}
+
 input[type="submit"] {
   padding: 8px 30px;
   font-size: 12px;
-  color: #222;
-  background: transparent;
+  background-color: #222;
+  color: #fff;
   border: 2px solid #222;
   border-radius: 100px;
   text-transform: uppercase;
@@ -456,8 +528,8 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   text-decoration: none;
-  background-color: #222;
-  color: #fff;
+  color: #222;
+  background: transparent;
 }
 
 /*--------------------------------------------------------------
@@ -482,7 +554,7 @@ footer p {
 #back-to-top {
   position: fixed;
   right: 15px;
-  top: 15px;
+  bottom: 15px;
   z-index: 2;
   width: 24px;
   height: 18px;
@@ -577,6 +649,82 @@ footer p {
   }
 }
 
+/* .pulsing {
+  -moz-animation: pulse 1.5s infinite;
+  -o-animation: pulse 1.5s infinite;
+  -webkit-animation: pulse 1.5s infinite linear;
+  animation: pulse 1.5s infinite;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@-moz-keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@-o-keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@-ms-keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+} */
 /*--------------------------------------------------------------
 6.0 Media queries
 --------------------------------------------------------------*/
@@ -594,6 +742,11 @@ footer p {
     display: none;
   }
 
+  #header-img {
+    margin-top: 16px;
+    z-index: 9999;
+  }
+
   #nav-bar {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
@@ -605,7 +758,13 @@ footer p {
     justify-content: flex-end;
   }
 
+  .nav-gradient {
+    background-color: #222;
+    box-shadow: 8px 10px 20px 0px rgba(46, 61, 73, 0.15);
+  }
+
   #nav-bar a {
+    font-size: 18px;
     -webkit-transition: 0.3s;
     transition: 0.3s;
   }
@@ -615,6 +774,15 @@ footer p {
     opacity: 0.6;
   }
 
+  .header-bottom p:first-child {
+    font-size: 32px;
+  }
+
+  .header-bottom p:nth-child(2) {
+    font-size: 24px;
+    font-weight: 100;
+  }
+
   .menu-icon-flex img {
     position: fixed;
   }
@@ -622,18 +790,27 @@ footer p {
   .img-bg-dynamics {
     height: 500px;
     background-image: url(img/BMW-S1000R-front-big.jpg);
+    /* background-attachment: fixed; */
   }
 
   .img-bg-engine {
-    height: 820px;
+    height: 920px;
     background-image: url(img/BMW-S1000R-willy-big.jpg);
     background-position: 30%;
   }
 
-  .img-bg-adjustements {
-    height: 820px;
-    background-image: url(img/bmw-youtube-big.jpg));
-    background-position: 30%;
+  .img-bg-specifications {
+    height: 920px;
+    background-image: url(img/BMW-S1000R-bg3-big.jpg);
+  }
+
+  .form-group input {
+    width: 50%;
+  }
+
+  #back-to-top {
+    right: 32px;
+    bottom: 32px;
   }
 }
 

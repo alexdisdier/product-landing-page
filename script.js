@@ -49,6 +49,30 @@ $('a[href*="#"]')
 });
 
 /*--------------------------------------------------------------
+3.0 onScroll navbar animation
+--------------------------------------------------------------*/
+
+var iScrollPos = 0;
+
+$(window).scroll(function () {
+
+    var iCurScrollPos = $(this).scrollTop();
+
+    if (iCurScrollPos > iScrollPos) {
+
+        //Scrolling Down
+$('#nav-bar').addClass('nav-gradient');
+} else if (iCurScrollPos < 250){
+
+       //Scrolling Up past 250px of top of page
+$('#nav-bar').removeClass('nav-gradient');
+    }
+
+    iScrollPos = iCurScrollPos;
+
+});
+
+/*--------------------------------------------------------------
 3.0 Mobile Menu
 --------------------------------------------------------------*/
 
@@ -91,7 +115,24 @@ if ($('#back-to-top').length) {
 }
 
 /*--------------------------------------------------------------
-5.0 Miscellanous
+5.0 Expand toggle buttons
+--------------------------------------------------------------*/
+var expanded = document.getElementById('js-toggle-specs');
+var lessen = document.getElementById('lessen');
+
+$("#js-toggle-specs").on('click', function() {
+  $("#js-expand-specs").slideToggle();
+  if (expanded.innerText == "+"){
+    expanded.innerText = "-";
+    lessen.innerText = "lessen List";
+  }else{
+    expanded.innerText = "+";
+    lessen.innerText = "expand List";
+  }
+})
+
+/*--------------------------------------------------------------
+6.0 Miscellanous
 --------------------------------------------------------------*/
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
