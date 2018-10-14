@@ -420,7 +420,7 @@ main {
 .img-bg-specifications {
   height: 320px;
   width: auto;
-  background-image: url(img/BMW-S1000R-bg3-small.jpg);
+  background-image: url(img/BMW-S1000R-bg3-sm.jpg);
   background-color: #222;
   background-repeat: no-repeat;
   background-position: center;
@@ -498,12 +498,12 @@ button:focus {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-align: center;
   -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .btn-plus {
@@ -620,8 +620,8 @@ footer p {
 
 .arrow-up {
   -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .bounce {
@@ -778,7 +778,7 @@ footer p {
   .nav-gradient {
     background-color: #222;
     -webkit-box-shadow: 8px 10px 20px 0px rgba(46, 61, 73, 0.15);
-            box-shadow: 8px 10px 20px 0px rgba(46, 61, 73, 0.15);
+    box-shadow: 8px 10px 20px 0px rgba(46, 61, 73, 0.15);
   }
 
   #nav-bar a {
@@ -881,5 +881,4 @@ footer p {
 /*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiIiwic291cmNlcyI6WyJtYWluLmNzcyJdLCJmaWxlIjoibWFpbi5jc3MifQ== */
 /*# sourceMappingURL=main.css.map */
 /*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiIiwic291cmNlcyI6WyJtYWluLmNzcyJdLCJmaWxlIjoibWFpbi5jc3MifQ== */
-
 /*# sourceMappingURL=main.css.map */
