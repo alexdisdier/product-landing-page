@@ -155,7 +155,7 @@ body {
 header {
   height: 100vh;
   background-image: url(img/BMW-S1000R-bg2-small.jpg);
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-color: #222;
   background-repeat: no-repeat;
   background-position: 43%;
