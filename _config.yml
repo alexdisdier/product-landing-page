@@ -1,0 +1,5 @@
+title: Product landing page
+description: This website is part of a freecodecamp responsive design certification. The product landing page will present the BMW S1000R.
+
+plugins:
+  - jekyll-seo-tag
