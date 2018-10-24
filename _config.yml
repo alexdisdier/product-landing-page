@@ -12,3 +12,4 @@ theme: product_landing_page
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - github-pages
