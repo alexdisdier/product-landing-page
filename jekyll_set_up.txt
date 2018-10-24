@@ -1,3 +1,0 @@
-1. Install rails => sudo gem install rails
-2. Install jekyll => sudo gem install jekyll
-3. Create a new static site and serve it locally => jekyll new myPersonalSite
