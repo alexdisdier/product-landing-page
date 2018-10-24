@@ -1,5 +1,14 @@
 title: Product landing page
 description: This website is part of a freecodecamp responsive design certification. The product landing page will present the BMW S1000R.
 
+url: https://alexdisdier.github.io/product-landing-page/
+
+twitter_username: alexdisdier
+github_username:  alexdisdier
+
+# Build settings
+markdown: kramdown
+theme: product_landing_page
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
