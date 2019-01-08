@@ -2,7 +2,7 @@
 
 This is a responsive product landing page sample for a BMW S1000R (For practice and not geared towards commercial use).
 
-![screenshot of the product landing page](/src/screenshot.jpg?raw=true "screenshot of a product landing page for BMW S1000R")
+![screenshot of the product landing page](screenshot.jpg?raw=true "screenshot of a product landing page for BMW S1000R")
 
 ## Usage example
 
